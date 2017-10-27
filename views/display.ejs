@@ -1,0 +1,20 @@
+<% layout("layout") -%>
+<div class="jumbotron text-center">
+	<h1>Available Donors</h1></br>
+    <a href="/searchDonor" class="btn btn-default">Back</a>
+</div>
+<div class="container">
+	<div id="display">
+	<ol style="font-size: 160%;font-family:'Ubuntu'">
+	<% for(var i=0; i<todos.length;i++){ %>
+	<li><h3>Name : <%=todos[i].name%></h3></br>
+		<h3>Gender : <%=todos[i].gender%></h3></br>
+		<h3>Contact number : <%=todos[i].telnum%></h3></br>
+		<h3>Date of birth : <%=todos[i].dob%></h3></br>
+		<h3>Weight : <%=todos[i].weight%> Kg</h3></br>
+	</li>
+	<% } %>
+	</ol>
+	</div>
+</div>
+

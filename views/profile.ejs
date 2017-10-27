@@ -1,0 +1,67 @@
+<% layout("layout") -%>
+<div class="jumbotron text-center">
+	<h1>Welcome <%= user.local.email %></h1>
+    <a href="/logout" class="btn btn-default">Logout</a>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Blood Bank</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/searchDonor">Search Donors</a></li>
+      <li><a href="/registerDonor">Register as Donor</a></li>
+      <li><a href="/contactUs">Contact us</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class="row">
+
+<h3>Your Blood Bank Account</h3>
+<ul>
+	<% if (user.local.email) { %>
+		<li>Email: <%= user.local.email %></li>
+		<li>Password: <%= user.local.password %></li>
+		<li><a href="/disconnect/local">Disconnect account</a></li>
+	<% } else { %>
+		<li><a href="/connect/local">Connect a local account</a></li>
+	<% } %>
+</ul>
+
+<h1>Chat with other donors</h1>
+<div id="pritish-chat">
+		<div id="chat-window">
+			<div id="output"></div>
+			<div id="feedback"></div>
+		</div>
+	</div>	
+	<div class="container">
+	<label for="username">Username:</label>	
+	<input type="text" id="username" placeholder="Username">
+	</br>
+	
+	<label for="message">Message</label>
+	<input type="text" id="message" placeholder="Type the message">
+	</br>
+	<button id="send">Send</button>
+</div>
+
+
+
+
+<!--<h3>Facebook Account</h3>
+<ul>
+	<% if (user.facebook.id) { %>
+		<li>ID: <%= user.facebook.id %></li>	
+		<li>Email: <%= user.facebook.email %></li>
+		<li>Token: <%= user.facebook.token %></li>
+		<li><a href="/disconnect/facebook">Disconnect account</a></li>		
+	<% } else { %>
+		<li><a href="/connect/facebook">Connect a Facebook account</a></li>
+	<% } %>
+</ul>
+-->
+</div>

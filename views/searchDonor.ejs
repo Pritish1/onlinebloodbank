@@ -1,0 +1,58 @@
+<% layout("layout") -%>
+<div class="jumbotron text-center">
+	<h1>Search for a Donor</h1></br>
+    <a href="/profile" class="btn btn-default">Back</a>
+</div>
+
+<div class="container">
+<form action="/display" method="post">
+<h2>Select the blood group</h2>
+<div class="form-group">
+  			<label for="sel1">Blood Group</label>
+ 			<select class="form-control" id="sel1" name="searchgp">
+    		<option>A+</option>
+    		<option>A-</option>
+    		<option>B+</option>
+    		<option>B-</option>
+    		<option>O+</option>
+    		<option>O-</option>
+    		<option>AB+</option>
+    		<option>AB-</option>
+  			</select>
+		</div>
+</br>
+</br>
+<h2>Select the state</h2>
+<div class="form-group">
+  			<label for="sel1">Select state</label>
+  			<select class="form-control" id="state" name="searchstate">
+    		<option>Maharashtra</option>
+    		<option>Goa</option>
+    		<option>Andhra pradesh</option>
+    		<option>Chattisgargh</option>
+    		<option>Jammu and Kashmir</option>
+    		<option>West Bengal</option>
+    		<option>Sikkim</option>
+    		<option>Karnataka</option>
+    		<option>Tamil Nadu</option>
+    		<option>Madhya pradesh</option>
+    		<option>Kerala</option>
+    		<option>Uttar pradesh</option>
+    		<option>Bihar</option>
+    		<option>Jharkand</option>
+    		<option>Gujrat</option>
+    		<option>Manipur</option>
+    		<option>Rajasthan</option>
+    		<option>Delhi</option>
+    		<option>Punjab</option>
+    		<option>Haryana</option>
+    		<option>Telangana</option>
+  			</select>
+		</div>		
+</br>
+</br>
+
+
+<button type="submit" class="btn btn-success">Search</button>
+</form>
+</div>
